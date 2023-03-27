@@ -8,6 +8,6 @@ module.exports = {
     publicPath: '/',
   },
   env: {
-    NEXT_PRIVATE_STANDALONE: process.env.NEXT_PRIVATE_STANDALONE,
+    NEXT_PRIVATE_STANDALONE: true,
   },
 };
