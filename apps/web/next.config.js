@@ -3,7 +3,7 @@ module.exports = {
   transpilePackages: ["ui"],
   output: {
     // Set the path where the standalone files will be generated
-    path: `${__dirname}/dist`,
+    path: `${__dirname}/.next/standalone`,
     // Set the public path of your app
     publicPath: '/',
   },
