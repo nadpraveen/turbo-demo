@@ -5,4 +5,11 @@ applications:
       phases:
         build:
           commands:
-            - yarn build:
+            - yarn workspace web build:
+        artifacts:
+          files:
+            - "**/*"
+          baseDirectory: apps/web/build
+        cache:
+          paths:
+            - node_modules/**/*
