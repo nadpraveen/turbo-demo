@@ -9,7 +9,7 @@ applications:
         artifacts:
           files:
             - "**/*"
-          baseDirectory: apps/web/build
+          baseDirectory: apps/web
         cache:
           paths:
             - node_modules/**/*
