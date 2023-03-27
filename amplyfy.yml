@@ -5,7 +5,7 @@ applications:
       phases:
         build:
           commands:
-            - yarn workspace web build:
+            - yarn build:
         artifacts:
           files:
             - "**/*"
