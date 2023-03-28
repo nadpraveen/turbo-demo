@@ -3,13 +3,21 @@ applications:
   - appRoot: apps/web
     frontend:
       phases:
+        preBuild:
+          commands:
+            - cd ../../
+            - yarn install
         build:
           commands:
-            - yarn build:
+            - yarn workspace web build
+            - cd apps/web
+        postBuild:
+          commands:
+            - cp -r .next/standalone/apps/website/. .next/standalone
         artifacts:
+          baseDirectory: .next
           files:
             - "**/*"
-          baseDirectory: apps/web
         cache:
           paths:
             - node_modules/**/*
